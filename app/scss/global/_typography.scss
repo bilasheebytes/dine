@@ -1,0 +1,67 @@
+@use "../utilities/" as *;
+
+h1 {
+  font-size: var(--font-medium);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.0125em;
+
+  @include breakpoint-up(medium) {
+    font-size: var(--font-large);
+  }
+
+  @include breakpoint-up(large) {
+    font-size: var(--font-xlarge);
+  }
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: 700;
+  line-height: 1;
+
+  @include breakpoint-up(medium) {
+    font-size: var(--font-large);
+  }
+}
+
+h3 {
+  font-size: var(--font-small);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  font-size: var(--font-xsmall);
+  line-height: 1.5;
+
+  @include breakpoint-up(medium) {
+    font-size: var(--font-small);
+  }
+
+  &.small {
+    font-size: var(--font-xsmall);
+  }
+}
+
+.button {
+  width: fit-content;
+  margin-inline: auto;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.16em;
+  padding: rem(24) rem(55);
+  text-transform: uppercase;
+  border: 1px solid var(--white);
+  transition: 250ms ease-in-out;
+  transition-property: background, color;
+
+  @include breakpoint-up(large) {
+    margin-inline: 0;
+  }
+
+  &:hover {
+    color: var(--cod-gray);
+    background: var(--white);
+  }
+}

@@ -1,0 +1,19 @@
+@use "../utilities/" as *;
+
+.header {
+  .logo {
+    position: absolute;
+    top: rem(65);
+
+    @include breakpoint-down(medium) {
+      top: rem(374);
+      left: 50%;
+      translate: -50% 0;
+    }
+
+    @include breakpoint-down(small) {
+      top: rem(232);
+      width: rem(82.4);
+    }
+  }
+}
