@@ -36,3 +36,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.has-shadow {
+  box-shadow: 0 75px 100px -50px var(--light-mirage);
+}
+
+.hide-on-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}

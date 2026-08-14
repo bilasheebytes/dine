@@ -4,18 +4,38 @@
   grid-template-rows: rem(300) repeat(4, auto);
   justify-items: center;
   color: var(--white);
+  background: var(--black);
 
   @include breakpoint-up(medium) {
     grid-template-rows: rem(452) repeat(4, auto);
+    padding-block-end: rem(87);
   }
 
   @include breakpoint-up(large) {
-    grid-template-rows: rem(258);
+    grid-template-rows: rem(258) repeat(4, auto);
     justify-items: start;
+    padding-block-end: rem(200);
+    max-height: rem(820);
+    overflow: hidden;
   }
 
   &__image {
     grid-row: 1 / -1;
+
+    img {
+      @include breakpoint-down(small) {
+        width: rem(375);
+      }
+
+      @include breakpoint-down(medium) {
+        width: rem(700);
+      }
+
+      @include breakpoint-up(large) {
+        min-height: rem(820);
+        object-fit: cover;
+      }
+    }
   }
 
   &__title {

@@ -1,0 +1,99 @@
+@use "../utilities/" as *;
+
+.features {
+  position: relative;
+  margin-block-start: rem(-72);
+
+  .feature {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    padding-block-end: rem(100);
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      column-gap: rem(125);
+    }
+
+    &:nth-child(2) {
+      @include breakpoint-up(large) {
+        padding-block-end: 0;
+      }
+
+      .feature__pattern {
+        top: auto;
+        right: auto;
+        bottom: rem(-29);
+        left: 50%;
+
+        @include breakpoint-up(large) {
+          right: rem(-205);
+          bottom: 0;
+          left: auto;
+        }
+      }
+
+      picture {
+        @include breakpoint-up(large) {
+          order: 2;
+        }
+      }
+    }
+
+    &__pattern {
+      position: absolute;
+      top: rem(184);
+      right: 50%;
+      max-width: none;
+
+      @include breakpoint-up(large) {
+        top: rem(313);
+        right: 38%;
+      }
+    }
+
+    &__image {
+      margin-block-end: rem(48);
+
+      @include breakpoint-up(medium) {
+        max-width: rem(573);
+      }
+
+      @include breakpoint-up(large) {
+        max-width: rem(540);
+        margin-block-end: 0;
+      }
+    }
+
+    &__lines {
+      position: absolute;
+      top: rem(258);
+      right: 0;
+
+      @include breakpoint-up(large) {
+        right: rem(-114);
+      }
+    }
+
+    &__text {
+      @include breakpoint-down(medium) {
+        display: grid;
+        justify-items: center;
+      }
+    }
+
+    &__divider {
+      margin-block-end: rem(36);
+    }
+
+    &__title {
+      max-width: 14ch;
+      margin-block-end: rem(13);
+    }
+
+    &__description {
+      max-width: 40ch;
+    }
+  }
+}
