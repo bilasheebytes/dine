@@ -3,6 +3,7 @@
 .features {
   position: relative;
   margin-block-start: rem(-72);
+  overflow-x: clip;
 
   .feature {
     position: relative;
@@ -24,12 +25,11 @@
       .feature__pattern {
         top: auto;
         right: auto;
-        bottom: rem(-29);
+        bottom: 0;
         left: 50%;
 
         @include breakpoint-up(large) {
           right: rem(-205);
-          bottom: 0;
           left: auto;
         }
       }
@@ -37,6 +37,7 @@
       picture {
         @include breakpoint-up(large) {
           order: 2;
+          margin-block-end: rem(-80);
         }
       }
     }
@@ -46,6 +47,8 @@
       top: rem(184);
       right: 50%;
       max-width: none;
+      pointer-events: none;
+      z-index: -1;
 
       @include breakpoint-up(large) {
         top: rem(313);

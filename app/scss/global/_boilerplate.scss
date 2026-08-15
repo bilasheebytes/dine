@@ -37,6 +37,11 @@ img {
   height: auto;
 }
 
+.dark {
+  color: var(--white);
+  background: var(--black);
+}
+
 .has-shadow {
   box-shadow: 0 75px 100px -50px var(--light-mirage);
 }

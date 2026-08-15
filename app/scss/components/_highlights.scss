@@ -1,0 +1,122 @@
+@use "../utilities/" as *;
+
+.highlights {
+  padding-block: rem(72);
+
+  @include breakpoint-up(medium) {
+    padding-block: rem(100);
+    padding-inline: rem(60);
+  }
+
+  @include breakpoint-up(large) {
+    padding-block-start: rem(200);
+    padding-inline: 0;
+  }
+
+  &__content {
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__text {
+    @include breakpoint-down(medium) {
+      display: grid;
+      justify-items: center;
+    }
+
+    h2 {
+      max-width: 18ch;
+      margin-block-end: rem(13);
+
+      @include breakpoint-up(medium) {
+        margin-block-end: rem(27);
+      }
+    }
+
+    p {
+      max-width: 40ch;
+      margin-block-end: rem(85);
+    }
+  }
+
+  &__divider {
+    margin-block-end: rem(36);
+
+    @include breakpoint-up(large) {
+      margin-block-end: rem(55);
+    }
+  }
+
+  &__items {
+    display: grid;
+    gap: rem(24);
+
+    @include breakpoint-up(large) {
+      padding-block-start: rem(48);
+    }
+  }
+
+  &__item {
+    @include breakpoint-up(medium) {
+      display: grid;
+      grid-template-columns: rem(128) rem(62) 1fr;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas:
+        "image line headline"
+        "image . description";
+    }
+
+    &:not(:last-child) {
+      padding-block-end: rem(56);
+      border-block-end: 2px solid var(--light-white);
+
+      @include breakpoint-up(medium) {
+        padding-block-end: rem(24);
+      }
+    }
+
+    > * {
+      @include breakpoint-up(medium) {
+        text-align: left;
+      }
+    }
+
+    &__image {
+      grid-area: image;
+
+      img {
+        @include breakpoint-down(small) {
+          margin-block-end: rem(36);
+        }
+      }
+    }
+
+    &__divider {
+      position: relative;
+      top: rem(10);
+      width: rem(32);
+      height: 1px;
+      background: var(--beaver);
+    }
+
+    h3 {
+      grid-area: headline;
+      margin-block-end: rem(6);
+    }
+
+    p {
+      grid-area: description;
+
+      @include breakpoint-down(small) {
+        max-width: 28ch;
+        margin-inline: auto;
+      }
+
+      @include breakpoint-up(medium) {
+        max-width: 40ch;
+      }
+    }
+  }
+}

@@ -3,8 +3,6 @@
 .hero {
   grid-template-rows: rem(300) repeat(4, auto);
   justify-items: center;
-  color: var(--white);
-  background: var(--black);
 
   @include breakpoint-up(medium) {
     grid-template-rows: rem(452) repeat(4, auto);
