@@ -238,6 +238,178 @@
           </div>
         </div>
       </section>
+      <section class="events wrapper">
+        <h2 class="visually-hidden">Events</h2>
+        <img
+          class="events__pattern hide-on-mobile"
+          src="/images/patterns/pattern-curve-top-right.svg"
+          alt=""
+          width="895"
+          height="320"
+        />
+        <div class="events__tabs" role="tablist" aria-label="Tabs">
+          <button
+            class="events__tab"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-1"
+            id="tab-1"
+            tabindex="0"
+          >
+            Family Gathering
+          </button>
+          <button
+            class="events__tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-2"
+            id="tab-2"
+            tabindex="-1"
+          >
+            Special Events
+          </button>
+          <button
+            class="events__tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-3"
+            id="tab-3"
+            tabindex="-1"
+          >
+            Social Events
+          </button>
+        </div>
+        <div
+          class="events__tabpanel"
+          id="panel-1"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="tab-1"
+        >
+          <div class="events__tabcontent">
+            <picture>
+              <source
+                media="(width >= 68.75em)"
+                srcset="/images/homepage/family-gathering-desktop@2x.jpg"
+                width="1080"
+                height="1200"
+              />
+              <source
+                media="(width >= 43.75em)"
+                srcset="/images/homepage/family-gathering-tablet@2x.jpg"
+                width="1146"
+                height="720"
+              />
+              <img
+                class="events__image has-shadow"
+                src="/images/homepage/family-gathering-mobile@2x.jpg"
+                alt="group of people eating a meal at a table"
+                width="652"
+                height="800"
+              />
+            </picture>
+            <div class="events__text">
+              <h3>Family Gathering</h3>
+              <p>
+                We love catering for entire families. So please bring everyone
+                along for a special meal with your loved ones. We’ll provide a
+                memorable experience for all.
+              </p>
+              <a href="/booking.html" class="button solid">Book a table</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="events__tabpanel"
+          id="panel-2"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="tab-2"
+          hidden
+        >
+          <div class="events__tabcontent">
+            <picture>
+              <source
+                media="(width >= 68.75em)"
+                srcset="/images/homepage/special-events-desktop@2x.jpg"
+                width="1080"
+                height="1200"
+              />
+              <source
+                media="(width >= 43.75em)"
+                srcset="/images/homepage/special-events-tablet@2x.jpg"
+                width="1146"
+                height="720"
+              />
+              <img
+                class="events__image has-shadow"
+                src="/images/homepage/special-events-mobile@2x.jpg"
+                alt="group of people eating a meal at a table"
+                width="652"
+                height="800"
+              />
+            </picture>
+            <div class="events__text">
+              <h3>Special Events</h3>
+              <p>
+                Whether it’s a romantic dinner or special date you’re
+                celebrating with others we’ll look after you. We’ll be sure to
+                mark your special date with an unforgettable meal.
+              </p>
+              <a href="/booking.html" class="button solid">Book a table</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="events__tabpanel"
+          id="panel-3"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="tab-3"
+          hidden
+        >
+          <div class="events__tabcontent">
+            <picture>
+              <source
+                media="(width >= 68.75em)"
+                srcset="/images/homepage/social-events-desktop@2x.jpg"
+                width="1080"
+                height="1200"
+              />
+              <source
+                media="(width >= 43.75em)"
+                srcset="/images/homepage/social-events-tablet@2x.jpg"
+                width="1146"
+                height="720"
+              />
+              <img
+                class="events__image has-shadow"
+                src="/images/homepage/social-events-mobile@2x.jpg"
+                alt="group of people eating a meal at a table"
+                width="652"
+                height="800"
+              />
+            </picture>
+            <div class="events__text">
+              <h3>Social Events</h3>
+              <p>
+                Are you looking to have a larger social event? No problem! We’re
+                more than happy to cater for big parties. We’ll work with you to
+                make your event a hit with everyone.
+              </p>
+              <a href="/booking.html" class="button solid">Book a table</a>
+            </div>
+          </div>
+        </div>
+        <img
+          class="events__lines hide-on-mobile"
+          src="/images/patterns/pattern-lines.svg"
+          alt=""
+          width="160"
+          height="76"
+        />
+      </section>
     </main>
+    <script src="./app/js/script.js" defer></script>
   </body>
 </html>

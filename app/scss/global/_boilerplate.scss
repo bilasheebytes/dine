@@ -46,6 +46,15 @@ img {
   box-shadow: 0 75px 100px -50px var(--light-mirage);
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .hide-on-mobile {
   @include breakpoint-down(small) {
     display: none;

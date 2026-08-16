@@ -4,11 +4,13 @@
   --white: hsl(0, 0%, 100%);
   --beaver: hsl(27, 22%, 51%);
   --cod-gray: hsl(0, 0%, 7%);
+  --dark-gray: hsl(0, 0%, 30%);
   --mirage: hsl(234, 30%, 13%);
   --ebony-clay: hsl(218, 21%, 18%);
   --shuttle-gray: hsl(217, 14%, 42%);
   --light-white: hsla(0, 0%, 100%, 0.15);
   --light-mirage: hsla(234, 30%, 13%, 0.5);
+  --light-dark-gray: hsl(0, 0%, 30%, 0.5);
   --font-xlarge: 5rem;
   --font-large: 3rem;
   --font-medium: 2rem;
@@ -63,6 +65,15 @@ img {
 
 .has-shadow {
   box-shadow: 0 75px 100px -50px var(--light-mirage);
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 @media (max-width: 43.74875em) {
@@ -137,6 +148,15 @@ p.small {
   }
 }
 .button:hover {
+  color: var(--cod-gray);
+  background: var(--white);
+}
+.button.solid {
+  color: var(--white);
+  background: var(--cod-gray);
+  border: 1px solid var(--cod-gray);
+}
+.button.solid:hover {
   color: var(--cod-gray);
   background: var(--white);
 }
@@ -446,5 +466,181 @@ p.small {
 @media (min-width: 43.75em) {
   .highlights__item p {
     max-width: 40ch;
+  }
+}
+
+.events {
+  position: relative;
+  padding-block: 6.25rem;
+  overflow-x: clip;
+}
+@media (min-width: 43.75em) {
+  .events {
+    padding-block: 7.5rem;
+  }
+}
+@media (min-width: 68.75em) {
+  .events {
+    padding-block: 10rem;
+  }
+}
+.events__pattern, .events__lines {
+  position: absolute;
+}
+.events__pattern {
+  max-width: none;
+  right: 54%;
+}
+@media (min-width: 68.75em) {
+  .events__pattern {
+    right: 67%;
+  }
+}
+.events__lines {
+  top: 5.125rem;
+  right: 77%;
+}
+@media (min-width: 68.75em) {
+  .events__lines {
+    top: 8.125rem;
+    right: 90%;
+  }
+}
+.events__tabs {
+  position: absolute;
+  width: 100%;
+  grid-column: 1/-1;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  z-index: 1;
+  /* position based on image's width * aspect ratio */
+  top: calc((100vw - 3rem) / 0.815 + 6.25rem + 2.5rem);
+}
+@media (min-width: 43.75em) {
+  .events__tabs {
+    top: 33.4375rem;
+    grid-auto-flow: column;
+    gap: 0;
+  }
+}
+@media (min-width: 68.75em) {
+  .events__tabs {
+    grid-column: 2;
+    grid-auto-flow: row;
+    justify-items: start;
+    top: auto;
+    bottom: 11.25rem;
+    left: 41.5625rem;
+  }
+}
+@media (min-width: 75em) {
+  .events__tabs {
+    bottom: 16.25rem;
+  }
+}
+.events__tab {
+  font-family: inherit;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.147em;
+  text-transform: uppercase;
+  color: var(--light-dark-gray);
+  border: none;
+  background: none;
+  transition: color 250ms ease-in-out;
+}
+.events__tab::before {
+  content: "";
+  position: relative;
+  top: 1.75rem;
+  display: block;
+  width: 3rem;
+  height: 1px;
+  margin-inline: auto;
+  background: var(--beaver);
+  opacity: 0;
+}
+@media (min-width: 43.75em) {
+  .events__tab::before {
+    top: 2.25rem;
+  }
+}
+@media (min-width: 68.75em) {
+  .events__tab::before {
+    width: 5.9375rem;
+    margin: 0;
+    top: 0.6875rem;
+    left: -2rem;
+    translate: -100% 0;
+  }
+}
+.events__tab[aria-selected=true] {
+  color: var(--dark-gray);
+}
+.events__tab[aria-selected=true]::before {
+  opacity: 1;
+}
+.events__tabpanel {
+  position: relative;
+}
+.events__tabcontent {
+  display: grid;
+  row-gap: 12.5rem;
+}
+@media (min-width: 43.75em) {
+  .events__tabcontent {
+    justify-items: center;
+    row-gap: 8.75rem;
+  }
+}
+@media (min-width: 68.75em) {
+  .events__tabcontent {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    -moz-column-gap: 7.8125rem;
+         column-gap: 7.8125rem;
+  }
+}
+@media (min-width: 43.75em) {
+  .events__image {
+    max-width: 35.8125rem;
+  }
+}
+@media (min-width: 68.75em) {
+  .events__image {
+    max-width: 33.75rem;
+  }
+}
+.events__text {
+  display: grid;
+}
+@media (max-width: 68.74875em) {
+  .events__text {
+    justify-items: center;
+  }
+}
+@media (min-width: 68.75em) {
+  .events__text {
+    padding-block-start: 3.75rem;
+  }
+}
+.events__text h3 {
+  font-size: var(--font-medium);
+  margin-block-end: 0.8125rem;
+}
+@media (min-width: 43.75em) {
+  .events__text h3 {
+    font-size: var(--font-large);
+  }
+}
+.events__text p {
+  max-width: 42ch;
+  margin-block-end: 1.6875rem;
+}
+@media (min-width: 43.75em) {
+  .events__text p {
+    margin-block-end: 3.75rem;
   }
 }/*# sourceMappingURL=styles.css.map */

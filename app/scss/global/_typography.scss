@@ -64,4 +64,15 @@ p {
     color: var(--cod-gray);
     background: var(--white);
   }
+
+  &.solid {
+    color: var(--white);
+    background: var(--cod-gray);
+    border: 1px solid var(--cod-gray);
+
+    &:hover {
+      color: var(--cod-gray);
+      background: var(--white);
+    }
+  }
 }
