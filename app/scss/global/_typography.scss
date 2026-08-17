@@ -45,6 +45,7 @@ p {
 }
 
 .button {
+  display: inline-block;
   width: fit-content;
   margin-inline: auto;
   font-weight: 600;
@@ -52,7 +53,7 @@ p {
   letter-spacing: 0.16em;
   padding: rem(24) rem(55);
   text-transform: uppercase;
-  border: 1px solid var(--white);
+  border: 1.5px solid var(--white);
   transition: 250ms ease-in-out;
   transition-property: background, color;
 
@@ -68,7 +69,7 @@ p {
   &.solid {
     color: var(--white);
     background: var(--cod-gray);
-    border: 1px solid var(--cod-gray);
+    border: 1.5px solid var(--cod-gray);
 
     &:hover {
       color: var(--cod-gray);

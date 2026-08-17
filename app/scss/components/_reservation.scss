@@ -1,0 +1,46 @@
+@use "../utilities/" as *;
+
+.reservation {
+  min-height: rem(240);
+  align-items: center;
+
+  @include breakpoint-down(medium) {
+    place-items: center;
+  }
+
+  &__picture,
+  &__text {
+    grid-row: 1;
+  }
+
+  &__picture {
+    height: 100%;
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    display: grid;
+    justify-items: center;
+    gap: rem(20);
+
+    @include breakpoint-up(medium) {
+      gap: rem(24);
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(2, auto);
+      justify-items: start;
+      align-items: center;
+    }
+
+    .button {
+      @include breakpoint-up(large) {
+        justify-self: end;
+      }
+    }
+  }
+}

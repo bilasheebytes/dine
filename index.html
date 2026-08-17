@@ -409,6 +409,33 @@
           height="76"
         />
       </section>
+      <section class="reservation wrapper dark">
+        <picture class="reservation__picture fullbleed">
+          <source
+            media="(width >= 68.75em)"
+            srcset="/images/homepage/ready-bg-desktop@2x.jpg"
+            width="2880"
+            height="480"
+          />
+          <source
+            media="(width >= 43.75em)"
+            srcset="/images/homepage/ready-bg-tablet@2x.jpg"
+            width="1536"
+            height="544"
+          />
+          <img
+            class="reservation__image"
+            src="/images/homepage/ready-bg-mobile@2x.jpg"
+            alt=""
+            width="750"
+            height="656"
+          />
+        </picture>
+        <div class="reservation__text">
+          <h2>Ready to make a reservation?</h2>
+          <a href="/booking.html" class="button">Book a table</a>
+        </div>
+      </section>
     </main>
     <script src="./app/js/script.js" defer></script>
   </body>

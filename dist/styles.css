@@ -130,6 +130,7 @@ p.small {
 }
 
 .button {
+  display: inline-block;
   width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
@@ -138,7 +139,7 @@ p.small {
   letter-spacing: 0.16em;
   padding: 1.5rem 3.4375rem;
   text-transform: uppercase;
-  border: 1px solid var(--white);
+  border: 1.5px solid var(--white);
   transition: 250ms ease-in-out;
   transition-property: background, color;
 }
@@ -154,7 +155,7 @@ p.small {
 .button.solid {
   color: var(--white);
   background: var(--cod-gray);
-  border: 1px solid var(--cod-gray);
+  border: 1.5px solid var(--cod-gray);
 }
 .button.solid:hover {
   color: var(--cod-gray);
@@ -642,5 +643,48 @@ p.small {
 @media (min-width: 43.75em) {
   .events__text p {
     margin-block-end: 3.75rem;
+  }
+}
+
+.reservation {
+  min-height: 15rem;
+  align-items: center;
+}
+@media (max-width: 68.74875em) {
+  .reservation {
+    place-items: center;
+  }
+}
+.reservation__picture, .reservation__text {
+  grid-row: 1;
+}
+.reservation__picture {
+  height: 100%;
+}
+.reservation__image {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.reservation__text {
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+}
+@media (min-width: 43.75em) {
+  .reservation__text {
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 68.75em) {
+  .reservation__text {
+    grid-template-columns: repeat(2, auto);
+    justify-items: start;
+    align-items: center;
+  }
+}
+@media (min-width: 68.75em) {
+  .reservation__text .button {
+    justify-self: end;
   }
 }/*# sourceMappingURL=styles.css.map */
