@@ -687,4 +687,70 @@ p.small {
   .reservation__text .button {
     justify-self: end;
   }
+}
+
+.footer {
+  padding-block: 5rem;
+}
+@media (min-width: 43.75em) {
+  .footer {
+    padding-block: 3.75rem;
+  }
+}
+@media (min-width: 68.75em) {
+  .footer {
+    padding-block: 5rem;
+  }
+}
+.footer p,
+.footer a {
+  font-size: 0.875rem;
+  line-height: 2;
+  color: var(--white);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+@media (min-width: 43.75em) {
+  .footer p,
+  .footer a {
+    text-align: left;
+  }
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 43.75em) {
+  .footer__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "logo location" ". times";
+  }
+}
+@media (min-width: 68.75em) {
+  .footer__content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "logo location times";
+  }
+}
+@media (min-width: 43.75em) {
+  .footer__content > * {
+    justify-self: start;
+  }
+}
+.footer__logo {
+  grid-area: logo;
+  margin-inline: auto;
+  margin-block-end: 2.625rem;
+}
+.footer__location {
+  grid-area: location;
+  margin-block-end: 2rem;
+}
+@media (max-width: 43.74875em) {
+  .footer__location {
+    text-align: center;
+  }
+}
+.footer__times {
+  grid-area: times;
 }/*# sourceMappingURL=styles.css.map */

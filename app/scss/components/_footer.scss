@@ -1,0 +1,70 @@
+@use "../utilities/" as *;
+
+.footer {
+  padding-block: rem(80);
+
+  @include breakpoint-up(medium) {
+    padding-block: rem(60);
+  }
+
+  @include breakpoint-up(large) {
+    padding-block: rem(80);
+  }
+
+  p,
+  a {
+    font-size: rem(14);
+    line-height: 2;
+    color: var(--white);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  &__content {
+    @include breakpoint-up(medium) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas:
+        "logo location"
+        ". times";
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "logo location times";
+    }
+
+    > * {
+      @include breakpoint-up(medium) {
+        justify-self: start;
+      }
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    margin-inline: auto;
+    margin-block-end: rem(42);
+  }
+
+  &__location {
+    grid-area: location;
+    margin-block-end: rem(32);
+
+    @include breakpoint-down(small) {
+      text-align: center;
+    }
+  }
+
+  &__times {
+    grid-area: times;
+  }
+}
