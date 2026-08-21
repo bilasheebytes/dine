@@ -2,17 +2,21 @@
 
 :root {
   // Colors
-  --black: hsl(0, 0%, 7%);
   --white: hsl(0, 0%, 100%);
   --beaver: hsl(27, 22%, 51%);
+  --green: hsl(113, 26%, 25%);
   --cod-gray: hsl(0, 0%, 7%);
   --dark-gray: hsl(0, 0%, 30%);
+  --warm-gray: hsl(0, 0%, 56%);
   --mirage: hsl(234, 30%, 13%);
+  --dusty-red: hsl(0, 43%, 50%);
   --ebony-clay: hsl(218, 21%, 18%);
   --shuttle-gray: hsl(217, 14%, 42%);
+  --light-green: hsl(105, 27%, 94%);
   --light-white: hsla(0, 0%, 100%, 0.15);
   --light-mirage: hsla(234, 30%, 13%, 0.5);
   --light-dark-gray: hsl(0, 0%, 30%, 0.5);
+  --light-dusty-red: hsla(0, 43%, 50%, 0.5);
 
   // Fonts
   --font-xlarge: #{rem(80)};

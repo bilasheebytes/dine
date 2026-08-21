@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="./dist/styles.css" />
+    <title>Dine Restaurant</title>
+  </head>
+  <body>
+    <main>
+      <section class="booking wrapper">
+        <div class="booking__content">
+          <a href="./index.html">
+            <img
+              class="booking__logo"
+              src="./images/logo.svg"
+              alt="Dine"
+              width="103"
+              height="40"
+            />
+          </a>
+          <div class="booking__text">
+            <h1>Reservations</h1>
+            <p>
+              We can’t wait to host you. If you have any special requirements
+              please feel free to call on the phone number below. We’ll be happy
+              to accommodate you.
+            </p>
+          </div>
+          <form class="form has-shadow" id="form" novalidate autocomplete="off">
+            <div
+              class="form__status"
+              role="status"
+              aria-live="polite"
+              id="status"
+              hidden
+            >
+              Reservation submitted successfully.
+            </div>
+            <section class="form__section">
+              <fieldset class="form__field">
+                <input
+                  class="form__input"
+                  type="text"
+                  id="form-name"
+                  name="name"
+                  placeholder="Name"
+                  aria-label="Name"
+                  autocomplete="name"
+                  aria-describedby="name-error"
+                  aria-invalid="false"
+                />
+                <p class="form__error" id="name-error" role="alert">
+                  This field is required
+                </p>
+              </fieldset>
+              <fieldset class="form__field">
+                <input
+                  class="form__input"
+                  type="email"
+                  id="form-email"
+                  name="email"
+                  placeholder="Email"
+                  aria-label="Email"
+                  autocomplete="email"
+                  aria-describedby="email-error"
+                  aria-invalid="false"
+                />
+                <p class="form__error" id="email-error" role="alert">
+                  This field is required
+                </p>
+              </fieldset>
+            </section>
+            <fieldset class="form__group" id="date-group">
+              <div class="form__legend-wrapper">
+                <legend class="form__legend">Pick a date</legend>
+                <p class="form__group-error" id="date-error" role="alert">
+                  This field is incomplete
+                </p>
+              </div>
+              <div class="form__inputs">
+                <div class="form__subfield">
+                  <input
+                    class="form__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="2"
+                    id="date-dd"
+                    name="date-dd"
+                    placeholder="DD"
+                    aria-label="Day"
+                    aria-invalid="false"
+                  />
+                </div>
+                <div class="form__subfield">
+                  <input
+                    class="form__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="2"
+                    id="date-mm"
+                    name="date-mm"
+                    placeholder="MM"
+                    aria-label="Month"
+                    aria-invalid="false"
+                  />
+                </div>
+                <div class="form__subfield">
+                  <input
+                    class="form__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="4"
+                    id="date-yyyy"
+                    name="date-yyyy"
+                    placeholder="YYYY"
+                    aria-label="Year"
+                    aria-invalid="false"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form__group" id="time-group">
+              <div class="form__legend-wrapper">
+                <legend class="form__legend">Pick a time</legend>
+                <p class="form__group-error" id="time-error" role="alert">
+                  This field is incomplete
+                </p>
+              </div>
+              <div class="form__inputs">
+                <div class="form__subfield">
+                  <input
+                    class="form__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="2"
+                    id="time-hh"
+                    name="time-hh"
+                    placeholder="09"
+                    aria-label="Hour"
+                    aria-invalid="false"
+                  />
+                </div>
+                <div class="form__subfield">
+                  <input
+                    class="form__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="2"
+                    id="time-mm"
+                    name="time-mm"
+                    placeholder="00"
+                    aria-label="Minute"
+                    aria-invalid="false"
+                  />
+                </div>
+                <div class="form__subfield">
+                  <select
+                    class="form__select"
+                    id="time-period"
+                    name="time-period"
+                    aria-label="AM or PM"
+                    aria-invalid="false"
+                  >
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form__party">
+              <button
+                type="button"
+                class="form__party-btn"
+                id="decrease"
+                aria-label="Decrease number of guests"
+              >
+                &minus;
+              </button>
+              <span
+                class="form__party-count"
+                id="party-count"
+                aria-live="polite"
+                >1 person</span
+              >
+              <button
+                type="button"
+                class="form__party-btn"
+                id="increase"
+                aria-label="Increase number of guests"
+              >
+                +
+              </button>
+              <input
+                type="hidden"
+                id="party-size-value"
+                name="party-size"
+                value="1"
+              />
+            </div>
+            <button type="submit" class="form__submit button solid">
+              Make Reservation
+            </button>
+          </form>
+        </div>
+      </section>
+      <div class="booking__patterns">
+        <img
+          src="./images/patterns/pattern-curve-bottom-right.svg"
+          alt=""
+          width="895"
+          height="320"
+        />
+        <img
+          src="./images/patterns/pattern-lines.svg"
+          alt=""
+          width="160"
+          height="76"
+        />
+      </div>
+    </main>
+    <footer class="footer wrapper dark">
+      <h2 class="visually-hidden">Footer</h2>
+      <div class="footer__content">
+        <a href="./index.html">
+          <img
+            class="footer__logo"
+            src="./images/logo.svg"
+            alt="Dine"
+            width="103"
+            height="40"
+          />
+        </a>
+        <div class="footer__location">
+          <p>Marthwaite, Sedbergh</p>
+          <p>Cumbria</p>
+          <a href="tel:+00441234567">+00 44 123 4567</a>
+        </div>
+        <div class="footer__times">
+          <p>Open Times</p>
+          <p>Mon - Fri: 09:00 AM - 10:00 PM</p>
+          <p>Sat - Sun: 09:00 AM - 11:30 PM</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./app/js/booking.js"></script>
+  </body>
+</html>
